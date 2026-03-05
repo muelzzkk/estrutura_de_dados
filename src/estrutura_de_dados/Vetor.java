@@ -104,7 +104,26 @@ public class Vetor {
         return true;
     }
 
+    public int indiceUltimo(String elemento){
+        for (int i = this.tamanho - 1; i >= 0 ; i--) {
+            if (this.elementos[i].equals(elemento)){
+                return i;
+            }
+        }
+        return -1;
+    }
 
+    public void removerTodos(String elemento){
+        while (remove(elemento));
+    }
+
+    public boolean adicionarSeNaoExiste(String elemento){
+        if (this.busca(elemento) == -1){
+            this.adiciona(elemento);
+            return true;
+        }
+        return false;
+    }
 
 
 }
