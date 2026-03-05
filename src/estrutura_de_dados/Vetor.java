@@ -125,5 +125,13 @@ public class Vetor {
         return false;
     }
 
-
+    public boolean inserirDepois(String referencia, String novoElemento){
+        int posicao = this.busca(referencia);
+        if (posicao == -1){
+            return false;
+        }
+        this.aumentaCapacidade();
+        this.adiciona(posicao + 1,novoElemento);
+        return true;
+    }
 }
